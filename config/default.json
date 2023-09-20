@@ -1,0 +1,14 @@
+{
+  "webserver": {
+    "listenPort": 3000,
+    "listenHost": "0.0.0.0"
+  },
+  "db": {
+    "databasefile": "data/speedtest.sqlit",
+    "collection": "speedtest"
+  },
+  "speedtest": {
+    "commandString": "bin\\speedtest.exe -f json --accept-license --accept-gdpr",
+    "intervalSec": 300
+  }
+}

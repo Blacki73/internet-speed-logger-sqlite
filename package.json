@@ -1,0 +1,28 @@
+{
+  "name": "speed-logger",
+  "version": "0.1.1",
+  "description": "Automated logger and grapher for speedtests",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node_modules/nodemon/bin/nodemon.js",
+    "speedtest": "run-test.js",
+    "webserver": "node_modules/forever/bin/forever run index.js"
+  },
+  "author": "Blacki73",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.6.2",
+    "config": "^3.2.3",
+    "express": "^4.14.0",
+    "morgan": "^1.9.1",
+    "sqlite3": "^5.1.6",
+    "vis-charts": "3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "forever": "^0.15.3",
+    "nodemon": "^1.19.4"
+  }
+}
