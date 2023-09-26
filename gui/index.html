@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/topbar.css" />
+    <title>Internet Speed Logger GUI</title>
+  </head>
+  <body>
+    <div id="controls">
+      <button id="start" title="Start Logging">Start Logging Service</button>
+      <button id="stop" class="hidden" title="Stop Logging">Stop Logging Service</button>
+    </div>
+
+    <webview 
+      autosize="on"
+      id="foo" 
+      src="http://localhost:3000" 
+      minwidth="800"
+      minheight="800"
+      >
+    </webview>
+
+    <script src="assets/js/render.js"></script>
+  </body>
+</html>

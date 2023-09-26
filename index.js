@@ -9,7 +9,13 @@ const listenPort = config.get('webserver.listenPort');
 const listenHost = config.get('webserver.listenHost');
 
 const app = express();
-app.use(morgan('combined'));
+
+// only log errors
+app.use(
+  morgan('combined', {
+    skip(req, res) { return res.statusCode < 400; },
+  }),
+);
 
 app.enable('etag');
 app.use(compression());

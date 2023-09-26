@@ -55,7 +55,7 @@ All configuration is held within the `/config/default.json` file. The following 
 | `db.databasefile`   | `data/speedtest.sqlite`        | path to store sqlite database file      |
 | `db.collection`      | `speedtest`       | Collection to use within database.   |
 | `speedtest.commandString`      | `bin/speedtest -f json --accept-license`       | Raw command to execute to perform speed test. Change this if you want it on a different path or specify a specific server.  use \\ on windows git bash |
-| `speedtest.intervalSec`      | `43200`       | Interval for which the speedtest will be run. This will be randomly skewed +/- 25% and limited to no less than 300 (5 minutes) seconds between runs.   |
+| `speedtest.intervalSec`      | `300`       | Interval for which the speedtest will be run. This will be randomly skewed +/- 25% and limited to no less than 300 (5 minutes) seconds between runs.   |
 
 ## Running Internet Speed Logger
 
@@ -71,4 +71,10 @@ cd internet-speed-logger-sqlite
 npm ci
 forever start index.js
 forever start run-speedtest.js daemon
+```
+
+
+## Running Electron Standalone Version
+```
+npm start
 ```
